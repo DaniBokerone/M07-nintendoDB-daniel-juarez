@@ -9,9 +9,9 @@ import javafx.stage.Stage;
 public class Main extends Application {
 
     final int WINDOW_WIDTH = 600;
-    final int WINDOW_HEIGHT = 400;
+    final int WINDOW_HEIGHT = 600;
     final int MIN_WIDTH = 300;
-    final int MIN_HEIGHT = 600;
+    final int MIN_HEIGHT = 400;
 
     public static void main(String[] args) {
         launch(args);

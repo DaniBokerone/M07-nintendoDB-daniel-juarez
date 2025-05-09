@@ -128,18 +128,21 @@ public class ControllerDesktop {
     }
 
     private void showDetails(JSONObject obj) {
-        String name = obj.getString("nom");
-        String imageName = obj.getString("imatge");
+        String name = obj.optString("nom", "Sense nom");
+        String imageName = obj.optString("imatge", "");
     
         loadTitle.setText(name);
-
-        if (obj.has("descripcio")) {
-            String description = obj.getString("descripcio");
-            loadDesc.setText(description); 
-        }else{
-            loadDesc.setText("");
+    
+        StringBuilder fullDescription = new StringBuilder();
+    
+        for (String key : obj.keySet()) {
+            if (!key.equals("imatge") && !key.equals("nom")) {
+                String value = obj.get(key).toString();
+                fullDescription.append(key).append(": ").append(value).append("\n\n");
+            }
         }
-        
+    
+        loadDesc.setText(fullDescription.toString());
     
         ImageView loadedImage = loadImageView(imageName);
         if (loadedImage != null) {
