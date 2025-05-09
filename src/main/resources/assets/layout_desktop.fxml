@@ -10,6 +10,8 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.text.TextFlow?>
+<?import javafx.scene.control.ListView?>
+
 
 <AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.ControllerDesktop">
    <children>
@@ -22,12 +24,12 @@
             </Label>
          </children>
       </AnchorPane>
-      <ChoiceBox fx:id="choiceBox" layoutX="17.0" layoutY="63.0" prefWidth="194.0" AnchorPane.leftAnchor="17.0" AnchorPane.topAnchor="63.0" />
-      <ScrollPane layoutX="17.0" layoutY="104.0" prefWidth="194.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="17.0" AnchorPane.topAnchor="104.0">
-         <content>
-            <VBox fx:id="vBoxContent" />
-         </content>
-      </ScrollPane>
+      <VBox layoutX="17.0" layoutY="63.0" AnchorPane.leftAnchor="17.0" AnchorPane.topAnchor="63.0" AnchorPane.bottomAnchor="10.0" prefWidth="194.0" spacing="10">
+         <children>
+            <ChoiceBox fx:id="choiceBox" prefWidth="194.0" />
+            <ListView fx:id="listView" prefWidth="210.0" />
+         </children>
+      </VBox>
       <AnchorPane layoutX="220.0" layoutY="63.0" AnchorPane.bottomAnchor="10.600000000000023" AnchorPane.leftAnchor="220.0" AnchorPane.rightAnchor="12.799999999999955" AnchorPane.topAnchor="63.200000000000045">
          <children>
             <StackPane layoutX="184.0" layoutY="51.0" prefHeight="150.0" prefWidth="200.0" AnchorPane.leftAnchor="184.0" AnchorPane.rightAnchor="183.20000000000005">
